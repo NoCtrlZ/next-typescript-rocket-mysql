@@ -16,3 +16,6 @@
 # Setup Project
 ### ESLint
 `$ eslint --init`
+
+# Reference
+About [redux-thunk](https://qiita.com/hiroya8649/items/c202742c99d2cc6159b8)
