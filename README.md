@@ -9,7 +9,7 @@
 ### Prettier
 `$ yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`
 ### Redux
-`$ yarn add redux react-redux @types/react-redux next-redux-wrapper`
+`$ yarn add redux react-redux @types/react-redux next-redux-wrapper redux-thunk`
 
 # Setup Project
 ### ESLint

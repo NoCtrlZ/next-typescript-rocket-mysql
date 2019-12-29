@@ -1,0 +1,13 @@
+{
+    "status": 200,
+    "todos": [
+        {
+            "id": "1",
+            "title": "First Note"
+        },
+        {
+            "id": "2",
+            "title": "Second Note"
+        }
+    ]
+}
