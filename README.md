@@ -5,7 +5,10 @@
 
 # [Frontend Dependencies Install](https://qiita.com/yohei_nakamura/items/2365682720ffd2fb3424)
 ### ESLint
-`$ yarn add -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`
+`$ yarn add -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react@latest`
 ### Prettier
 `$ yarn add -D prettier eslint-config-prettier eslint-plugin-prettier`
 
+# Setup Project
+### ESLint
+`$ eslint --init`
