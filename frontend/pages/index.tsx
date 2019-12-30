@@ -10,6 +10,9 @@ const IndexPage: NextPage = () => (
         <Link href="/about">
           <a>About</a>
         </Link>
+        <Link href="/signin">
+          <a>Signin</a>
+        </Link>
       </p>
     </Layout>
   )
