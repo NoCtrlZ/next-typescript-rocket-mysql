@@ -6,6 +6,7 @@ CREATE TABLE temporary_users (
     mail VARCHAR(50) CHARACTER SET utf8,
     password VARCHAR(64) CHARACTER SET utf8,
     salt VARCHAR(16) CHARACTER SET utf8,
+    cypher VARCHAR(64) CHARACTER SET utf8,
     updated_at TIMESTAMP NOT NULL default current_timestamp on update current_timestamp,
     created_at TIMESTAMP NOT NULL default current_timestamp
 );
