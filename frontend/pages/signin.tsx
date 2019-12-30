@@ -20,7 +20,13 @@ class LoginPage extends React.Component<{}, { user_mail: string, user_password: 
         this.setState({user_password: event.target.value})
     }
     sendTemporaryUser() {
-        Axios.get("http://localhost:8000")
+        Axios.post("http://localhost:8000/api/v1/signin", {
+            email: this.state.user_mail,
+            password: this.state.user_password,
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
         .then(function (response) {
             console.log(response)
         })

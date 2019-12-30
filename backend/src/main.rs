@@ -8,7 +8,7 @@ extern crate rocket_cors;
 use routes::*;
 use rocket::http::Method;
 use rocket_cors::{
-    AllowedHeaders, AllowedOrigins, Error,
+    AllowedHeaders, AllowedOrigins,
     Cors, CorsOptions
 };
 
@@ -23,11 +23,12 @@ fn make_cors() -> Cors {
 
     CorsOptions{
         allowed_origins,
-        allowed_methods: vec![Method::Get].into_iter().map(From::from).collect(),
+        allowed_methods: vec![Method::Get, Method::Post].into_iter().map(From::from).collect(),
         allowed_headers: AllowedHeaders::some(&[
             "Authorization",
             "Accept",
             "Access-Control-Allow-Origin",
+            "Content-Type",
         ]),
         allow_credentials: true,
         ..Default::default()
