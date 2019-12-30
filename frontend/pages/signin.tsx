@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
+import Axios from 'axios'
 import { NextPage } from 'next'
 import '../styles/login.scss'
 
@@ -19,7 +20,10 @@ class LoginPage extends React.Component<{}, { user_mail: string, user_password: 
         this.setState({user_password: event.target.value})
     }
     sendTemporaryUser() {
-        console.log(this.state.user_mail, this.state.user_password)
+        Axios.get("http://localhost:8000")
+        .then(function (response) {
+            console.log(response)
+        })
     }
     render() {
         return(

@@ -16,7 +16,8 @@ pub fn test() -> Json<Vec<Data>> {
     }])
 }
 
-#[post("/api/v1/signin", format = "json", data="<temporary_user>")]
+#[post("/api/v1/signin", format = "application/json", data="<temporary_user>")]
 pub fn register_temporary_user(temporary_user: Json<TemporaryUser>) -> String {
+    println!("Accepted Post Request {:?}", temporary_user.0);
     format!("Accepted Post Request {:?}", temporary_user.0)
 }

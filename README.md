@@ -12,6 +12,8 @@
 `$ yarn add redux react-redux @types/react-redux next-redux-wrapper redux-thunk`
 ### Sass
 `$ yarn add -D @zeit/next-sass node-sass`
+### Axios
+`$ yarn add axios`
 
 # Setup Project
 ### ESLint
