@@ -11,6 +11,6 @@ use routes::*;
 
 fn main() {
     rocket::ignite()
-        .mount("/", routes![index, test])
+        .mount("/", routes![index, test, register_temporary_user])
         .launch();
 }

@@ -1,5 +1,6 @@
 use rocket_contrib::json::Json;
 use crate::models::Data;
+use crate::models::TemporaryUser;
 
 #[get("/")]
 pub fn index() -> &'static str {
@@ -13,4 +14,9 @@ pub fn test() -> Json<Vec<Data>> {
         name: "sexydynamite".to_string(),
         done: false
     }])
+}
+
+#[post("/api/v1/signin", format = "json", data="<temporary_user>")]
+pub fn register_temporary_user(temporary_user: Json<TemporaryUser>) -> String {
+    format!("Accepted Post Request {:?}", temporary_user.0)
 }
