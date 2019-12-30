@@ -9,10 +9,10 @@ extern crate mysql;
 use routes::*;
 use rocket::http::Method;
 use rocket_cors::{ AllowedHeaders, AllowedOrigins, Cors, CorsOptions };
-use mysql as my;
 
 mod models;
 mod routes;
+mod database;
 
 fn make_cors() -> Cors {
     let allowed_origins = AllowedOrigins::some_exact(&[
@@ -43,6 +43,5 @@ fn rocket() -> rocket::Rocket {
 }
 
 fn main() {
-    let pool = my::Pool::new("mysql://shin:0523@localhost:3306");
     rocket().launch();
 }
