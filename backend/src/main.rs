@@ -4,13 +4,12 @@
 #[macro_use]
 extern crate rocket;
 extern crate rocket_cors;
+extern crate mysql;
 
 use routes::*;
 use rocket::http::Method;
-use rocket_cors::{
-    AllowedHeaders, AllowedOrigins,
-    Cors, CorsOptions
-};
+use rocket_cors::{ AllowedHeaders, AllowedOrigins, Cors, CorsOptions };
+use mysql as my;
 
 mod models;
 mod routes;
@@ -44,5 +43,6 @@ fn rocket() -> rocket::Rocket {
 }
 
 fn main() {
+    let pool = my::Pool::new("mysql://shin:0523@localhost:3306");
     rocket().launch();
 }
