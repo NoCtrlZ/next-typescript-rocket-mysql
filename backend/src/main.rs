@@ -13,6 +13,7 @@ use rocket_cors::{ AllowedHeaders, AllowedOrigins, Cors, CorsOptions };
 mod models;
 mod routes;
 mod database;
+mod crypto;
 
 fn make_cors() -> Cors {
     let allowed_origins = AllowedOrigins::some_exact(&[

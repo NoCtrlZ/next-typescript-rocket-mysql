@@ -15,12 +15,22 @@
 ### Axios
 `$ yarn add axios`
 
-# Setup Project
+# Reflect Module
 ### ESLint
 `$ eslint --init`
+
+# Setup Project
+### Next
+`$ cd frontend && yarn dev`  
+You can see the UI on port 3000
+### Rocket
+`$ cd backend && cargo run`
+API server is listening on port 8000
 ### MySQL
-`$ mysql database/test_user.sql`  
-`$ mysql < test_user.sql`
+`$ mysql < database/create_tables.sql`  
+`$ mysql < database/test_user.sql`
 
 # Reference
-About [redux-thunk](https://qiita.com/hiroya8649/items/c202742c99d2cc6159b8)
+- [redux-thunk](https://qiita.com/hiroya8649/items/c202742c99d2cc6159b8)
+- [random-string](https://qiita.com/aoyagikouhei/items/b796632ff6581197737c)
+- [sha256](http://kizkoh.hatenablog.com/entry/2016/06/02/154525)
