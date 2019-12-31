@@ -27,8 +27,11 @@ You can see the UI on port 3000
 `$ cd backend && cargo run`  
 API server is listening on port 8000
 ### MySQL
-`$ mysql < database/create_tables.sql`  
-`$ mysql < database/test_user.sql`
+`$ mysql < database/initialize/create_tables.sql`  
+`$ mysql < database/initialize/test_user.sql`
+
+# Start Application
+`$ skaffold dev`
 
 # Reference
 - [redux-thunk](https://qiita.com/hiroya8649/items/c202742c99d2cc6159b8)

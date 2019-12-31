@@ -8,8 +8,11 @@ build:
     context: backend
   - image: shinsaku0523/rocket
     context: frontend
+  - image: shinsaku0523/mysql
+    context: database
 deploy:
   kubectl:
     manifests:
     - backend/k8s-rocket.yaml
     - frontend/k8s-next.yaml
+    - database/k8s-mysql.yaml
