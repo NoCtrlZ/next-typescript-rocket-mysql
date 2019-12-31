@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2alpha1
+kind: Config
+metadata:
+  name: rocket-nextjs-mysql
+build:
+  artifacts:
+  - image: shinsaku0523/next
+    context: backend
+  - image: shinsaku0523/rocket
+    context: frontend
+deploy:
+  kubectl:
+    manifests:
+    - backend/k8s-rocket.yaml
+    - frontend/k8s-next.yaml

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rocket
+spec:
+  containers:
+  - name: rocket
+    image: shinsaku0523/rocket
