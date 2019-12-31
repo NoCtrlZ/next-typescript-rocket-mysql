@@ -14,6 +14,7 @@ mod models;
 mod routes;
 mod database;
 mod crypto;
+mod task;
 
 fn make_cors() -> Cors {
     let allowed_origins = AllowedOrigins::some_exact(&[
