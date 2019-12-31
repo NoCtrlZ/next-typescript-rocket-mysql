@@ -39,3 +39,8 @@ pub fn stretch_hash_value(value: &str) -> String {
     }
     sha256.result_str()
 }
+
+pub fn hash_salt_and_password(salt: &str, password: &str) -> String {
+    let value = format!("{}{}", &salt, password);
+    stretch_hash_value(&value)
+}

@@ -24,7 +24,7 @@
 `$ cd frontend && yarn dev`  
 You can see the UI on port 3000
 ### Rocket
-`$ cd backend && cargo run`
+`$ cd backend && cargo run`  
 API server is listening on port 8000
 ### MySQL
 `$ mysql < database/create_tables.sql`  

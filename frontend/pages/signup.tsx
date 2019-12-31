@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import Axios from 'axios'
 import { NextPage } from 'next'
-import '../styles/signin.scss'
+import '../styles/signup.scss'
 
-class Signin extends React.Component<{}, { user_mail: string, user_password: string}> {
+class Signup extends React.Component<{}, { user_mail: string, user_password: string}> {
     constructor(props: any) {
         super(props);
         this.state = { user_mail: '', user_password: ''}
@@ -20,7 +20,7 @@ class Signin extends React.Component<{}, { user_mail: string, user_password: str
         this.setState({user_password: event.target.value})
     }
     sendTemporaryUser() {
-        Axios.post("http://localhost:8000/api/v1/signin", {
+        Axios.post("http://localhost:8000/api/v1/signup", {
             email: this.state.user_mail,
             password: this.state.user_password,
             headers: {
@@ -33,14 +33,14 @@ class Signin extends React.Component<{}, { user_mail: string, user_password: str
     }
     render() {
         return(
-            <div id="signin">
+            <div id="signup">
                 <Link href="/">
                 <a>Home</a>
                 </Link>
                 <Link href="/about">
                 <a>About</a>
                 </Link>
-                <h1>This Is Signin Page</h1>
+                <h1>This Is Signup Page</h1>
                 <p>Please Fill In Your Registeration Information</p>
                 <div id="register-form">
                     <p>Mail</p>
@@ -59,4 +59,4 @@ class Signin extends React.Component<{}, { user_mail: string, user_password: str
     }
 }
 
-export default Signin
+export default Signup

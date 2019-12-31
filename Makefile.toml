@@ -1,0 +1,31 @@
+[tasks.start]
+description = "application setting up"
+script = ['''
+#!/usr/bin/env bash
+echo "starting application"
+makers rocket & makers react
+''']
+
+[tasks.rocket]
+description = "api server setting up"
+script = ['''
+#!/usr/bin/env bash
+echo "starting rocket"
+cd backend && cargo run
+''']
+
+[tasks.react]
+description = "react server setting up"
+script = ['''
+#!/usr/bin/env bash
+echo "starting react"
+cd frontend && yarn dev
+''']
+
+[tasks.reset]
+description = "mysql tables cleaning"
+script = ['''
+#!/usr/bin/env bash
+echo "cleaning database"
+mysql < database/create_tables.sql
+''']

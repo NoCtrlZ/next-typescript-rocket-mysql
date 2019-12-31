@@ -39,7 +39,7 @@ fn make_cors() -> Cors {
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![index, test, register_temporary_user])
+        .mount("/", routes![register_temporary_user, signin_temporary_user])
         .attach(make_cors())
 }
 
